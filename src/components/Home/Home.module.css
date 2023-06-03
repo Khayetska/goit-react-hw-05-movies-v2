@@ -1,0 +1,18 @@
+.trending_list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 19px;
+}
+
+.trending_item {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.link {
+    color: #000;
+    text-decoration: none;
+    font-size: 23px;
+}

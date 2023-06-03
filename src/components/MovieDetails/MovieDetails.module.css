@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie_poster {
+    width: 250px;
+    height: 100%;
+}
+
+.movie_title_accent {
+    color: #b80b0b;
+    font-size: 30px;
+}
+
+.movie_title {
+    margin-bottom: 40px;
+}
+
+.field_title {
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
