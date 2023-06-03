@@ -17,7 +17,7 @@ function MovieDetails() {
   const [movie, setMovie] = useState({});
   const { movieId } = useParams();
 
-  const location = useLocation();
+  // const location = useLocation();
   // console.log('details', location);
 
   useEffect(() => {
