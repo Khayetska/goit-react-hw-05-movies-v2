@@ -37,3 +37,16 @@ p {
   margin: 0 50px;
   margin-top: 2px;
 }
+
+/* .backBtn {
+  background-color: #b80b0b;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 250ms ease-in-out;
+}
+
+.backBtn:hover {
+  background-color: #cc0f0f;
+} */

@@ -8,9 +8,7 @@ const { search_form, search_fild, search_btn, movies_list, movies_item } = css;
 function Movies() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [movies, setMovies] = useState([]);
-
   const location = useLocation();
-  // console.log('movie', location);
 
   useEffect(() => {
     const search = searchParams.get('query') ?? [];
@@ -36,9 +34,7 @@ function Movies() {
           name="search"
           className={search_fild}
           autoComplete="off"
-          // autoFocus
           placeholder="Search movies"
-          // value={search}
         />
         <button type="submit" className={search_btn}>
           Search
@@ -49,7 +45,7 @@ function Movies() {
           return (
             <Link
               to={`${movie.id}`}
-              state={location}
+              state={{ from: location }}
               key={movie.id}
               className={movies_item}
             >

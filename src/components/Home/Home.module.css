@@ -11,8 +11,21 @@
     gap: 3px;
 }
 
+.trending_icon {
+    transition: transform 200ms ease-in-out;
+}
+
 .link {
     color: #000;
     text-decoration: none;
     font-size: 23px;
+    transition: font-size 200ms ease-in-out;
+}
+
+.trending_item:hover .trending_icon {
+    transform: scale(1.2);
+}
+
+.trending_item:hover .link {
+    font-size: 25px;
 }

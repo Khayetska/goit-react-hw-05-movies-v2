@@ -1,0 +1,25 @@
+.cast_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.cast_img {
+    width: 200px;
+    border-radius: 6px;
+    min-height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.cast_item {
+    background-color: #ededed;
+    padding: 20px;
+    border-radius: 6px;
+    width: 200px;
+    height: 370px;
+}

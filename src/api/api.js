@@ -3,7 +3,9 @@ const KEY = 'bc1a38dbf70e6a30c3ffc04bb2eb445c';
 
 export const getTrending = async () => {
   try {
-    const data = await fetch(`${BASE_URL}/trending/all/day?api_key=${KEY}`);
+    const data = await fetch(
+      `${BASE_URL}/trending/movie/day?language=en-US&api_key=${KEY}`
+    );
     return await data.json();
   } catch (error) {
     console.log(error);
@@ -24,6 +26,28 @@ export const getMovies = async search => {
 export const getDetails = async movieId => {
   try {
     const data = await fetch(`${BASE_URL}/movie/${movieId}?api_key=${KEY}`);
+    return await data.json();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getCast = async movieId => {
+  try {
+    const data = await fetch(
+      `${BASE_URL}/movie/${movieId}/credits?api_key=${KEY}`
+    );
+    return await data.json();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getReviews = async movieId => {
+  try {
+    const data = await fetch(
+      `${BASE_URL}/movie/${movieId}/reviews?api_key=${KEY}`
+    );
     return await data.json();
   } catch (error) {
     console.log(error);

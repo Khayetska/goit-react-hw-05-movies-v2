@@ -1,0 +1,81 @@
+.backBtn {
+    background-color: #b80b0b;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 250ms ease-in-out;
+}
+
+.backBtn:hover {
+    background-color: #cc0f0f;
+}
+
+.wrapper {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.movie_poster {
+    min-width: 300px;
+    max-width: 300px;
+    border-radius: 6px;
+    /* border: #b80b0b 2px solid; */
+    overflow: hidden;
+}
+
+.movie_title {
+    margin-bottom: 30px;
+    color: #696969;
+}
+
+.movie_title_accent {
+    color: #b80b0b;
+    font-size: 30px;
+}
+
+.countries_list {
+    display: flex;
+}
+
+.field_title {
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
+
+.additional_info {
+    margin: 30px 0;
+    padding: 10px 0;
+    border-top: 2px solid #b80b0b;
+    border-bottom: 2px solid #b80b0b;
+}
+
+.addInfo_title {
+    margin: 0;
+    margin-bottom: 14px;
+    font-size: 20px;
+}
+
+.addInfo_list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.addInfo_item {
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 17px;
+    transition: color 300ms ease-in-out, font-size 300ms ease-in-out;
+}
+
+.addInfo_item:hover {
+    color: #b80b0b;
+    /* text-decoration: underline; */
+    font-size: 18px;
+}
