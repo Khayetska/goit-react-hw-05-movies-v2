@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react';
 import { AiOutlineFire } from 'react-icons/ai';
-import { Link, useLocation } from 'react-router-dom';
+// import { Link, useLocation } from 'react-router-dom';
 import { getTrending } from 'api/api';
 import css from './Home.module.css';
+import MoviesList from 'components/MoviesList/MoviesList';
 
 const { trending_list, trending_item, trending_icon, link } = css;
 
 function Home() {
   const [trendingMovies, setTrendingMovies] = useState([]);
-
-  const location = useLocation();
 
   useEffect(() => {
     async function fetch() {
@@ -26,7 +25,16 @@ function Home() {
   return (
     <>
       <h1>Trending today</h1>
-      <ul className={trending_list}>
+      <MoviesList movies={trendingMovies}>
+        <AiOutlineFire fill="#f00" size={23} className={trending_icon} />
+      </MoviesList>
+    </>
+  );
+}
+
+export default Home;
+
+/* <ul className={trending_list}>
         {trendingMovies.map(movie => (
           <li key={movie.id} className={trending_item}>
             <AiOutlineFire fill="#f00" size={23} className={trending_icon} />
@@ -39,9 +47,4 @@ function Home() {
             </Link>
           </li>
         ))}
-      </ul>
-    </>
-  );
-}
-
-export default Home;
+      </ul> */

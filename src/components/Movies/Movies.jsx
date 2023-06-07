@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
-import { Link, useLocation, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { getMovies } from 'api/api';
 import css from './Movies.module.css';
+import MoviesList from 'components/MoviesList/MoviesList';
 
 const { search_form, search_fild, search_btn, movies_list, movies_item } = css;
 
 function Movies() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [movies, setMovies] = useState([]);
-  const location = useLocation();
 
   useEffect(() => {
     const search = searchParams.get('query') ?? [];
@@ -40,7 +40,14 @@ function Movies() {
           Search
         </button>
       </form>
-      <ul className={movies_list}>
+      <MoviesList movies={movies} />
+    </>
+  );
+}
+
+export default Movies;
+
+/* <ul className={movies_list}>
         {movies.map(movie => {
           return (
             <Link
@@ -53,9 +60,4 @@ function Movies() {
             </Link>
           );
         })}
-      </ul>
-    </>
-  );
-}
-
-export default Movies;
+      </ul> */
