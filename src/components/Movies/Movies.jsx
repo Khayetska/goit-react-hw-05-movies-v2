@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getMovies } from 'api/api';
-import css from './Movies.module.css';
 import MoviesList from 'components/MoviesList/MoviesList';
-
-const { search_form, search_fild, search_btn, movies_list, movies_item } = css;
+import SearchForm from 'components/SearchForm/SearchForm';
 
 function Movies() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -28,7 +26,15 @@ function Movies() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className={search_form}>
+      <SearchForm onSubmit={handleSubmit} />
+      <MoviesList movies={movies} />
+    </>
+  );
+}
+
+export default Movies;
+
+/* <form onSubmit={handleSubmit} className={search_form}>
         <input
           type="text"
           name="search"
@@ -39,13 +45,7 @@ function Movies() {
         <button type="submit" className={search_btn}>
           Search
         </button>
-      </form>
-      <MoviesList movies={movies} />
-    </>
-  );
-}
-
-export default Movies;
+      </form> */
 
 /* <ul className={movies_list}>
         {movies.map(movie => {

@@ -21,7 +21,7 @@ const {
 } = css;
 
 function MovieInfo() {
-  const [movie, setMovie] = useState({});
+  const [movie, setMovie] = useState(null);
   const { movieId } = useParams();
   const location = useLocation();
   const backLinkLocation = useRef(location.state?.from ?? '/');
@@ -33,6 +33,8 @@ function MovieInfo() {
     }
     fetch();
   }, [movieId]);
+
+  if (!movie) return;
 
   const {
     title,

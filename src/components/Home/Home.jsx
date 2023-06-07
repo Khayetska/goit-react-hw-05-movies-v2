@@ -1,11 +1,7 @@
 import { useEffect, useState } from 'react';
 import { AiOutlineFire } from 'react-icons/ai';
-// import { Link, useLocation } from 'react-router-dom';
 import { getTrending } from 'api/api';
-import css from './Home.module.css';
 import MoviesList from 'components/MoviesList/MoviesList';
-
-const { trending_list, trending_item, trending_icon, link } = css;
 
 function Home() {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -26,7 +22,7 @@ function Home() {
     <>
       <h1>Trending today</h1>
       <MoviesList movies={trendingMovies}>
-        <AiOutlineFire fill="#f00" size={23} className={trending_icon} />
+        <AiOutlineFire fill="#f00" size={23} />
       </MoviesList>
     </>
   );

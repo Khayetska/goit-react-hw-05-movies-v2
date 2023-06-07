@@ -1,0 +1,46 @@
+.movies_list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    font-size: 19px;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.movies_link {
+    background-color: #eeeeee;
+    padding-left: 10px;
+    height: 50px;
+    border-radius: 6px;
+    transition: box-shadow 250ms ease-in-out;
+    display: flex;
+    align-items: center;
+
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+
+
+    transition: font-size 200ms ease-in-out;
+}
+
+.movies_link:hover {
+    font-size: 22px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+svg {
+    transition: transform 200ms ease-in-out;
+}
+
+.movies_link:hover svg {
+    transform: scale(1.2);
+}
+
+.movies_item {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
